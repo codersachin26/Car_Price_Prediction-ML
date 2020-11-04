@@ -3,7 +3,7 @@ import pickle
 import sklearn
 
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='Templates')
 Model = pickle.load(open("Prediction_model.pkl","rb"))
 
 @app.route("/",methods=['POST','GET'])
