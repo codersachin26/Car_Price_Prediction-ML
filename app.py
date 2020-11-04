@@ -4,7 +4,7 @@ import sklearn
 
 
 app = Flask(__name__)
-Model = pickle.load(open("Prediction_Model.pkl","rb"))
+Model = pickle.load(open("Prediction_model.pkl","rb"))
 
 @app.route("/",methods=['POST','GET'])
 def price_prediction():
