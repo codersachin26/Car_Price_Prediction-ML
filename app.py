@@ -50,4 +50,4 @@ def price_prediction():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost',debug=False)
+    app.run(debug=True)
