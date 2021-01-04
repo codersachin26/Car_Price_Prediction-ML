@@ -36,7 +36,8 @@ def price_prediction():
             Fuel_Type_Petrol=0
             Fuel_Type_Diesel=0 
 
-        No_Year = 2020 - No_Year                            
+        No_Year = 2020 - No_Year
+        Present_Price = Present_Price/100000                            
         data = [Present_Price,Kms_Driven,Fuel_Type_Diesel,Fuel_Type_Petrol,Seller_Type,Transmission_Type,No_Year]
         predicted_Value = Model.predict([data])
         selling_price = round(predicted_Value[0],2)
