@@ -45,7 +45,7 @@ def price_prediction():
         if selling_price < 0:
             return render_template('index.html',text='you cant sell this car')
         else:
-            return render_template('index.html',text='You can sell your Car at {} Lakh INR '.format(selling_price))
+            return render_template('index.html',text='You can sell your Car at <strong>{}<strong> Lakh INR '.format(selling_price))
     else:
         return render_template('index.html')
 
