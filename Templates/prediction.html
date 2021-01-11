@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+</head>
+
+<body>
+    
+
+ <div style="left:0%; display: flex;"> 
+     <div style="left: 0;"> <img src="{{url_for('static',filename='Car.jpg')}}" alt="" style="height: 400px; width: 800px;"></div>
+     <div style="margin-right: -200px; padding: 30px; font-size: x-large; font-family: 'Times New Roman', Times, serif ;"> <h1>Car</h1><br> <h1>Price</h1><br> <h1>Prediction</h1> </div>
+ </div>
+
+
+   <div style="background-color: rgb(83, 199, 122); margin-left: 100px; margin-right: 100px; width:80%; ">
+   <h1 style="text-align: center;">Your Car Information</h1><hr><hr> <br>
+    <div style="margin-left: 50px; margin-right: 50px;">   
+         
+        <span>Present Price: </span> <h3>{{car.present_price}}</h3> <hr>
+        <span>Bought Year: </span> <h3>{{car.bought_year}}</h3><hr>
+        <span>Total KMs: </span> <h3>{{car.total_kms}}</h3> <hr>
+        <span>Fuel Type: </span> <h3>{{car.fuel_type}}</h3><hr>
+        <span>Seller Type: </span> <h3>{{car.seller_type}}</h3><hr>
+        <span>Transmission Type: </span> <h3>{{car.transmission_type}}</h3><hr>
+    </div>
+    <br><br>
+         <div style="padding: 50px; background-color: rgb(82, 174, 228); text-align: center; margin-top: 20px; width:90%">
+               {% if selling_price %}
+            <h3> You Can Sell Your Car at <strong style="background-color: rgb(230, 162, 243); width: fit-content;">{{selling_price}}</strong> Lakh INR</h3>
+              {% else %}
+            <h3> You Can't Sell Your Car</h3>
+            {% endif %}
+
+        </div>
+    </div>
+
+</body>
+
+</html>
